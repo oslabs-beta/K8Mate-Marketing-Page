@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+
 
 import { Hero } from './components/template/pocket/Hero'
 import { Header } from './components/template/pocket/Header'
@@ -17,12 +19,20 @@ function App() {
 
   return (
     <>  
-      <Header />
-      <Hero />
-      <PrimaryFeatures />
-      <SecondaryFeatures/>
-      <Team />
-      <Footer />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Header />
+            <Hero />
+            <PrimaryFeatures />
+            <SecondaryFeatures />
+            <Team />
+            <Footer />
+          </>
+        } />
+        {/* Redirect all other routes to / */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </>
   )
 }
