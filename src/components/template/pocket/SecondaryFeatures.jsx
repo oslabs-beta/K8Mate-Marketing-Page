@@ -2,11 +2,13 @@ import { useId } from 'react'
 
 import { Container } from './Container'
 
-import {
-  ChatBubbleLeftRightIcon,
-  DocumentMagnifyingGlassIcon,
-  AdjustmentsHorizontalIcon,
-} from '@heroicons/react/16/solid'
+// import {
+//   ChatBubbleLeftRightIcon,
+//   DocumentMagnifyingGlassIcon,
+//   AdjustmentsHorizontalIcon,
+// } from '@heroicons/react/16/solid'
+
+import { CustomIcon1, CustomIcon2, CustomIcon3 } from './CustomIcon'; // Adjust the path if necessary
 
 
 const features = [
@@ -14,19 +16,19 @@ const features = [
     name: 'AI LLM Integration',
     description:
       "We will integrate AI to analyze and summarize the Kubernetes cluster performance, providing insights for admins and developers in an easy-to-read format.",
-    icon: ChatBubbleLeftRightIcon,
+    icon: CustomIcon1,
   },
   {
     name: 'Multi-Cluster Recognition',
     description:
       "Implement a multi-view feature that can instantly swap to another active Kubernetes cluster.",
-    icon: DocumentMagnifyingGlassIcon,
+    icon: CustomIcon2,
   },
   {
     name: 'Configure Resources',
     description:
       "Create an easy-to-use interface to scale, delete, restart or rollback cluster resources like pods, nodes, and deployments.",
-    icon: AdjustmentsHorizontalIcon,
+    icon: CustomIcon3,
   },
 ]
 

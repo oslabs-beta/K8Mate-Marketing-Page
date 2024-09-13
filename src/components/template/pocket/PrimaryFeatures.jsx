@@ -34,8 +34,8 @@ import AlertsGif from '../../../assets/gif/alerts-showcase.gif'
 import TreeGif from '../../../assets/gif/tree-showcase.gif'
 import { BackgroundIllustration } from './Hero'
 
-const MotionAppScreenHeader = motion(AppScreen.Header)
-const MotionAppScreenBody = motion(AppScreen.Body)
+// const MotionAppScreenHeader = motion(AppScreen.Header)
+// const MotionAppScreenBody = motion(AppScreen.Body)
 
 
 const features = [
