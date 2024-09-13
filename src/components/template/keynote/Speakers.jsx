@@ -122,10 +122,7 @@ const days = [
   // },
 ]
 
-function ImageClipPaths({
-  id,
-  ...props
-}: React.ComponentPropsWithoutRef<'svg'> & { id: string }) {
+function ImageClipPaths({ id, ...props }) {
   return (
     <svg aria-hidden="true" width={0} height={0} {...props}>
       {/* <defs>
@@ -150,7 +147,7 @@ export function Team() {
   useEffect(() => {
     const lgMediaQuery = window.matchMedia('(min-width: 1024px)')
 
-    function onMediaQueryChange({ matches }: { matches: boolean }) {
+    function onMediaQueryChange({ matches }) {
       setTabOrientation(matches ? 'vertical' : 'horizontal')
     }
 

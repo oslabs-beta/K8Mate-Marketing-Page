@@ -1,24 +1,30 @@
 'use client'
 
 import { useRef, useState } from 'react'
-// import Link from 'next/link'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 
 export function NavLinks() {
   let [hoveredIndex, setHoveredIndex] = useState(null)
   let timeoutRef = useRef(null)
 
+  const scrollToSection = (id) => {
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return [
-    ['Features', '/#features'],
-    ['Reviews', '/#reviews'],
-    ['Pricing', '/#pricing'],
-    ['FAQs', '/#faqs'],
-  ].map(([label, href], index) => (
+    ['Features', '#features'],
+    ['Next Features', '#next-features'],
+    ['Meet The Team', '#team'],
+  ].map(([label, id], index) => (
     <Link
       key={label}
-      href={href}
-      className="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-0"
+      // href={href}
+      className="relative -mx-1 -my-2 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-0"
+      onClick={() => scrollToSection(id)}
       onMouseEnter={() => {
         if (timeoutRef.current) {
           window.clearTimeout(timeoutRef.current)

@@ -16,16 +16,11 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-
-      <h1>Vite + React</h1>
-  
+    <>  
       <Header />
       <Hero />
       <PrimaryFeatures />
       <SecondaryFeatures/>
-      {/* <NextFeatures/> */}
-      {/* <Timeline /> */}
       <Team />
       <Footer />
     </>

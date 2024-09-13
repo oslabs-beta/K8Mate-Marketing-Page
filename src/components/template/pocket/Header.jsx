@@ -1,8 +1,5 @@
-'use client'
-
 // import Link from 'next/link'
-import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom'
 import {
   Popover,
   PopoverButton,
@@ -11,6 +8,10 @@ import {
 } from '@headlessui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 
+// import { Button } from '@/components/Button'
+// import { Container } from '@/components/Container'
+// import { Logo } from '@/components/Logo'
+// import { NavLinks } from '@/components/NavLinks'
 import { Button } from './Button'
 import { Container } from './Container'
 import { Logo } from './Logo'
@@ -42,7 +43,9 @@ function ChevronUpIcon(props) {
   )
 }
 
-function MobileNavLink(props) {
+function MobileNavLink(
+  props
+) {
   return (
     <PopoverButton
       as={Link}
@@ -57,16 +60,16 @@ export function Header() {
     <header>
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
-          <div className="relative z-10 flex items-center gap-16">
+          <div className="relative z-10 flex items-center gap-10">
             <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+              <Logo className="h-10 w-auto" /> 
             </Link>
-            <div className="hidden lg:flex lg:gap-10">
+            <div className="flex lg:gap-10">
               <NavLinks />
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <Popover className="lg:hidden">
+            {/* <Popover className="lg:hidden">
               {({ open }) => (
                 <>
                   <PopoverButton
@@ -109,12 +112,17 @@ export function Header() {
                               Features
                             </MobileNavLink>
                             <MobileNavLink href="/#reviews">
-                              Reviews
+                              Planned Features
                             </MobileNavLink>
                             <MobileNavLink href="/#pricing">
-                              Pricing
+                              GitHub
                             </MobileNavLink>
-                            <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
+                            <MobileNavLink href="/#faqs">
+                              FAQs
+                            </MobileNavLink>
+                            <MobileNavLink href="/#team">
+                              Meet the Team
+                            </MobileNavLink>
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
                             <Button href="/login" variant="outline">
@@ -128,16 +136,16 @@ export function Header() {
                   </AnimatePresence>
                 </>
               )}
-            </Popover>
-            <Button href="/login" variant="outline" className="hidden lg:block">
-              Log in
-            </Button>
-            <Button href="#" className="hidden lg:block">
-              Download
+            </Popover> */}
+            {/* <Button variant="outline" className="hidden lg:block" onClick={() => window.location.href = 'https://github.com/oslabs-beta/super-kuber'}>
+              GitHub
+            </Button> */}
+            <Button className="hidden lg:block" onClick={() => window.open('https://github.com/oslabs-beta/super-kuber','_blank')}>
+              GitHub
             </Button>
           </div>
         </Container>
       </nav>
-    </header> 
+    </header>
   )
 }
