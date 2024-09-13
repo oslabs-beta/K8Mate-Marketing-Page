@@ -210,7 +210,7 @@ function FeaturesDesktop() {
       </TabList>
       <div className="relative col-span-6">
         {/* Render the image of the selected feature */}
-        <div className="z-10 mx-auto w-full w-[620px]">
+        <div className="z-10 mx-auto w-full max-w-[620px]">
           <img
             src={features[selectedIndex].image} // Use image field here
             alt={features[selectedIndex].name}
